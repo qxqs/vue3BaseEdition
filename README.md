@@ -1,4 +1,3 @@
-
 # vue3项目基础框架搭建流程
 
 ### 1.创建项目
@@ -242,7 +241,7 @@ export const httpApi = new class {
         // 请求接口路径
         this.loginApi = '/login/login' // 登录
     }
-    Login(code: string, data: Object)){
+    Login( data: Object)){
         return axios<ResDataStruct<T>>({ url: this.loginApi, method: "post", data })
     }
 }
@@ -250,7 +249,7 @@ export const httpApi = new class {
 
 ### 9.创建全局配置文件
 
-**在src文件夹下创建hooks、interface、types文件，以及在相应的文件夹下创建index.ts文件**
+**在src文件夹下创建hooks(配置共用函数)、interface(定义全局接口类型)、types(定义全局类型别名)文件夹，以及在相应的文件夹下创建index.ts文件**
 
 ### 10.扩展
 
@@ -260,7 +259,7 @@ export const httpApi = new class {
 
 ```
 // npm 安装依赖
-npm i -asve @vitejs/plugin-legacy
+npm i -save @vitejs/plugin-legacy
 
 // vite.config.ts
 import legacy from '@vitejs/plugin-legacy'
@@ -279,7 +278,7 @@ export default defineConfig({
 
 ```
 // npm 安装依赖
-npm i -asve @vitejs/plugin-legacy
+npm i -save vite-plugin-compression
 
 // vite.config.ts
 import viteCompression from 'vite-plugin-compression'
@@ -295,14 +294,14 @@ export default defineConfig({
 
 ```
 // npm 安装依赖
-npm i -asve @vitejs/plugin-legacy
+npm i -save vite-plugin-rsw
 ```
 
 **4.vite插件@vitejs/plugin-vue-jsx的作用是为编译JSX文件**
 
 ```
 // npm 安装依赖
-npm i -asve @vitejs/plugin-vue-jsx
+npm i -save @vitejs/plugin-vue-jsx
 
 // vite.config.ts
 import vueJsx from '@vitejs/plugin-vue-jsx'
