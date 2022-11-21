@@ -18,7 +18,7 @@ npm i
 **初始化依赖后再安装项目所需基础依赖**
 
 ```
-npm i -asve vue-router vuex axios
+npm i -save vue-router vuex axios
 ```
 
 **安装开发所需依赖**
