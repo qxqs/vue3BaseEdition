@@ -4,10 +4,13 @@
  * @Autor: zhuokunhao
  * @Date: 2022-11-15 17:04:54
  * @LastEditors: zhuokunhao
- * @LastEditTime: 2022-11-23 14:56:06
+ * @LastEditTime: 2023-05-30 14:25:13
  */
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
 
+/* 页面加载进度条 */
+import NProgress from 'nprogress' // progress bar
+import 'nprogress/nprogress.css' // progress bar style
 const routers = [
   {
     path: '/',
@@ -26,9 +29,14 @@ const router = createRouter({
   routes: routers as unknown as RouteRecordRaw[]
 })
 
-// 路由守卫
+// 路由守卫-跳转前
 router.beforeEach((to, from, next) => {
+  NProgress.start(); //开启进度条
   next()
 })
 
+// 路由守卫-跳转后
+router.afterEach(() => {
+  NProgress.done(); //完成进度条
+});
 export default router;

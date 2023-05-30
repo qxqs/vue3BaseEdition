@@ -7,9 +7,7 @@
  * @LastEditTime: 2022-11-16 10:48:21
 -->
 <template>
-  <div>
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script lang="ts" setup></script>
