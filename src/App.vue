@@ -4,12 +4,22 @@
  * @Autor: zhuokunhao
  * @Date: 2022-11-11 16:57:20
  * @LastEditors: zhuokunhao
- * @LastEditTime: 2022-11-16 10:48:21
+ * @LastEditTime: 2023-07-24 13:55:41
 -->
 <template>
-  <router-view></router-view>
+    <ConfigProvider :locale="zh_CN" class="">
+    <router-view />
+  </ConfigProvider>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ConfigProvider } from 'ant-design-vue'
+import zh_CN from "ant-design-vue/es/locale/zh_CN";
+import dayjs from 'dayjs';
+import 'dayjs/locale/zh-cn';
+dayjs.locale('zh-cn');
+</script>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+@import url("@/components/global.less");
+</style>

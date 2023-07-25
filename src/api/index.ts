@@ -9,6 +9,7 @@
 //导入各模块的接口在导出，整理在一个文件中，方便在开发中引入多个模块的接口
 
 import { commonApi } from './common'// 公共接口模块
+import { systemApi } from './system'// 公共接口模块
 
 
-export { commonApi }
+export { commonApi,systemApi }
