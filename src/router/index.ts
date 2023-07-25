@@ -4,7 +4,7 @@
  * @Autor: zhuokunhao
  * @Date: 2022-11-15 17:04:54
  * @LastEditors: zhuokunhao
- * @LastEditTime: 2023-07-25 14:30:15
+ * @LastEditTime: 2023-07-25 16:13:51
  */
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import layout from "@/components/layout/layout";
@@ -15,20 +15,26 @@ const routers: Array<RouteRecordRaw> = [
   {
     path: "/",
     redirect: "/home",
-    meta: { title: "首页", hidden: false },
     component: layout,
     children: [
       {
-        path: "/home",
-        name: "home",
-        component: () => import("@/views/Home/index.vue"),
-        meta: { title: "版本对比", hidden: false },
-      },
-      {
-        path: "/home1",
-        name: "home1",
-        component: () => import("@/views/Home/index.vue"),
-        meta: { title: "版本对比1", hidden: false },
+        path: "/pageHome",
+        redirect: "/home",
+        meta: { title: "首页", hidden: false },
+        children: [
+          {
+            path: "/home",
+            name: "home",
+            component: () => import("@/views/Home/index.vue"),
+            meta: { title: "版本对比", hidden: false },
+          },
+          {
+            path: "/home1",
+            name: "home1",
+            component: () => import("@/views/Home/index.vue"),
+            meta: { title: "版本对比1", hidden: false },
+          },
+        ],
       },
     ],
   },

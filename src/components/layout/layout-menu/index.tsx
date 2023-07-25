@@ -4,7 +4,7 @@
  * @Autor: jiajun.wu
  * @Date: 2022-07-26 14:42:26
  * @LastEditors: zhuokunhao
- * @LastEditTime: 2023-07-25 14:30:00
+ * @LastEditTime: 2023-07-25 16:11:47
  */
 import { defineComponent, h, onMounted, ref, watch } from 'vue'
 import Events from '@/utils/Event';
@@ -78,7 +78,7 @@ const LayoutMenu = defineComponent({
           selectedKeys:selectedKeys.value,
           openKeys: openKeys.value,
           onSelect: menuSelect,
-        }, ()=>router.options.routes.filter(e => !e.meta?.hidden).map(val => renderMenuItem(val))),
+        }, ()=>router.options.routes[0].children?.filter(e => !e.meta?.hidden).map(val => renderMenuItem(val))),
       ])
     }
   }
