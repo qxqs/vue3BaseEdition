@@ -21,7 +21,6 @@
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-rsw": "^2.0.11",
     "vue": "^3.2.41",
-    "vue-puzzle-vcode": "^1.1.10",
     "vue-router": "^4.1.6",
     "vuex": "^4.1.0",
     "ynos-storage": "^1.0.4"
